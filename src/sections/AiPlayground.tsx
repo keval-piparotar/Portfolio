@@ -4,7 +4,7 @@ import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Terminal, Bot, ShieldAlert, Cpu } from "lucide-react";
 
-const customEase = [0.32, 0.72, 0, 1];
+const customEase: [number, number, number, number] = [0.32, 0.72, 0, 1];
 
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 80, filter: "blur(12px)" },

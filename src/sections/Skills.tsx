@@ -15,7 +15,7 @@ const skills = [
   { name: "Git & Infrastructure", iconUrl: "https://cdn.simpleicons.org/github/white", projects: ["Used heavily across all 5+ Repositories"], category: "Tools", span: "md:col-span-12 md:row-span-1" },
 ];
 
-const customEase = [0.32, 0.72, 0, 1];
+const customEase: [number, number, number, number] = [0.32, 0.72, 0, 1];
 
 const containerVariants = {
   hidden: { opacity: 0 },

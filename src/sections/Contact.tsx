@@ -1,10 +1,9 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Copy, Terminal, Send, Code2, Briefcase, Globe, ArrowRight } from "lucide-react";
-import MagneticButton from "@/components/MagneticButton";
+import { Send } from "lucide-react";
 
-const customEase = [0.32, 0.72, 0, 1];
+const customEase: [number, number, number, number] = [0.32, 0.72, 0, 1];
 
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 80, filter: "blur(12px)" },
@@ -21,9 +20,6 @@ const fadeUpVariants = {
 };
 
 export default function Contact() {
-  const handleCopyEmail = () => {
-    navigator.clipboard.writeText("kevalpiparotar4@gmail.com");
-  };
 
   return (
     <section id="contact" className="relative w-full py-32 md:py-48 px-4 sm:px-8 lg:px-16 overflow-hidden z-10">
@@ -64,7 +60,7 @@ export default function Contact() {
                 variants={fadeUpVariants}
                 className="text-5xl md:text-7xl font-extrabold tracking-[-0.03em] leading-tight text-white"
               >
-                Let's <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-600">Build</span> Together.
+                Let&apos;s <span className="text-transparent bg-clip-text bg-gradient-to-r from-gray-300 to-gray-600">Build</span> Together.
               </motion.h3>
 
               <motion.p 
@@ -85,39 +81,14 @@ export default function Contact() {
                     <div className="w-2.5 h-2.5 rounded-full bg-gray-700" />
                     <div className="w-2.5 h-2.5 rounded-full bg-gray-700" />
                   </div>
-                  <Terminal className="w-3.5 h-3.5 text-gray-500 ml-2" />
                   <span className="text-[10px] font-mono text-gray-500 uppercase tracking-widest">connect.sh</span>
                 </div>
                 <div className="p-5 font-mono text-sm flex flex-col gap-4">
                   <p className="text-gray-500 text-xs"># Execute email protocol</p>
                   <div className="flex items-center justify-between bg-black p-3 rounded-lg border border-white/5 group hover:border-emerald-500/30 transition-colors duration-500">
                     <span className="text-emerald-400 select-all tracking-tight">kevalpiparotar4@gmail.com</span>
-                    <button onClick={handleCopyEmail} className="text-gray-600 hover:text-white transition-colors" title="Copy Email">
-                      <Copy className="w-4 h-4" />
-                    </button>
                   </div>
                 </div>
-              </div>
-            </motion.div>
-
-            {/* Social Dock */}
-            <motion.div custom={4} variants={fadeUpVariants} className="flex flex-col space-y-4">
-              <span className="text-[10px] font-mono text-gray-500 uppercase tracking-widest">Network Links</span>
-              <div className="flex gap-4">
-                {[
-                  { icon: Code2, label: "GitHub", href: "https://github.com/keval-piparotar" },
-                  { icon: Briefcase, label: "LinkedIn", href: "#" },
-                  { icon: Globe, label: "Website", href: "#" },
-                ].map((social) => (
-                  <a 
-                    key={social.label} 
-                    href={social.href} 
-                    className="w-12 h-12 rounded-full border border-white/10 bg-white/[0.02] flex items-center justify-center text-gray-400 hover:text-white hover:bg-white/10 hover:border-white/20 hover:-translate-y-1 transition-all duration-500 ease-[cubic-bezier(0.32,0.72,0,1)] shadow-[inset_0_1px_1px_rgba(255,255,255,0.05)]"
-                    target="_blank" rel="noopener noreferrer"
-                  >
-                    <social.icon className="w-5 h-5" />
-                  </a>
-                ))}
               </div>
             </motion.div>
           </motion.div>
@@ -161,7 +132,7 @@ export default function Contact() {
                     <textarea 
                       rows={5}
                       className="w-full bg-black border border-white/10 rounded-xl px-5 py-4 text-white placeholder-gray-700 text-sm focus:outline-none focus:border-emerald-500/50 focus:ring-1 focus:ring-emerald-500/50 transition-all duration-500 resize-none"
-                      placeholder="Tell me about your project..."
+                      placeholder="Ready to build something extraordinary? Let&apos;s talk about your next big idea."
                     />
                   </div>
 

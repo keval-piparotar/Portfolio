@@ -1,7 +1,7 @@
 "use client";
 
 import { useRef, useState, MouseEvent } from "react";
-import { motion, useScroll, useTransform, useMotionValue, useSpring, AnimatePresence } from "framer-motion";
+import { motion, useScroll, useTransform, useMotionValue, useSpring } from "framer-motion";
 
 const experiences = [
   {
@@ -27,7 +27,7 @@ const experiences = [
   }
 ];
 
-const customEase = [0.32, 0.72, 0, 1];
+const customEase: [number, number, number, number] = [0.32, 0.72, 0, 1];
 
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 50, filter: "blur(10px)" },
@@ -39,7 +39,15 @@ const fadeUpVariants = {
   },
 };
 
-const ExperienceCard = ({ exp, isEven, index }: { exp: any, isEven: boolean, index: number }) => {
+interface ExperienceData {
+  role: string;
+  company: string;
+  period: string;
+  description: string;
+  tech: string[];
+}
+
+const ExperienceCard = ({ exp, isEven }: { exp: ExperienceData, isEven: boolean }) => {
   const cardRef = useRef<HTMLDivElement>(null);
   const [isHovered, setIsHovered] = useState(false);
 

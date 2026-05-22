@@ -9,7 +9,7 @@ const stats = [
   { label: "Core Technologies", value: 9, suffix: "+" },
 ];
 
-const customEase = [0.32, 0.72, 0, 1];
+const customEase: [number, number, number, number] = [0.32, 0.72, 0, 1];
 
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 80, filter: "blur(12px)" },
@@ -76,7 +76,7 @@ export default function About() {
                 I specialize in bridging the gap between raw machine learning and human-centric web design. From engineering autonomous AI defence systems (WADE) to building deepfake detection models (TruthLens) and intelligent assistants (Jarvis).
               </p>
               <p>
-                My mindset revolves around building highly secure, problem-solving software. Whether it's optimizing a TensorFlow model for real-time analysis, or orchestrating a seamless React frontend, I build scalable systems that feel like magic.
+                My mindset revolves around building highly secure, problem-solving software. Whether it&apos;s optimizing a TensorFlow model for real-time analysis, or orchestrating a seamless React frontend, I build scalable systems that feel like magic.
               </p>
             </motion.div>
           </motion.div>

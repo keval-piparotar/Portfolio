@@ -1,12 +1,11 @@
 "use client";
 
 import { useEffect, useState } from 'react';
-import dynamic from 'next/dynamic';
 import { motion, useMotionValue, useSpring } from "framer-motion";
 import { ArrowRight, Download, Mail } from "lucide-react";
 import MagneticButton from "@/components/MagneticButton";
 
-const customEase = [0.32, 0.72, 0, 1];
+const customEase: [number, number, number, number] = [0.32, 0.72, 0, 1];
 
 const fadeUpVariants = {
   hidden: { opacity: 0, y: 80, filter: "blur(12px)" },

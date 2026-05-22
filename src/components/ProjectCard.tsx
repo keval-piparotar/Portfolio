@@ -16,7 +16,7 @@ interface ProjectCardProps {
 
 export default function ProjectCard({ title, description, techStack, githubUrl, liveUrl, index, className = "" }: ProjectCardProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const [isHovered, setIsHovered] = useState(false);
+  const [, setIsHovered] = useState(false);
 
   const x = useMotionValue(0);
   const y = useMotionValue(0);
