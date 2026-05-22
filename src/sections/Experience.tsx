@@ -214,7 +214,7 @@ export default function Experience() {
 
           <div className="flex flex-col space-y-20 mt-8 relative z-10">
             {experiences.map((exp, index) => (
-              <ExperienceCard key={exp.id} exp={exp} isEven={index % 2 === 0} index={index} />
+              <ExperienceCard key={exp.id} exp={exp} isEven={index % 2 === 0} />
             ))}
           </div>
 

@@ -40,7 +40,8 @@ export default function MagneticButton({ children, className, onClick, variant =
 
   return (
     <Component
-      {...{ref: buttonRef as unknown as React.Ref<HTMLAnchorElement & HTMLButtonElement>}}
+      // @ts-expect-error Polymorphic ref issue
+      ref={buttonRef}
       onMouseMove={handleMouse}
       onMouseLeave={reset}
       animate={{ x: position.x, y: position.y }}
